@@ -33,7 +33,7 @@ export const Schema = z.object({
       着装管理: z.object({
         // 预设套装系统
         预设套装: z.record(
-          z.string().describe('套装编号'),
+          z.coerce.number().describe('套装编号').prefault(0),
           z.object({
             编号: z.coerce.number().prefault(0),
             名称: z.string().prefault(''),
@@ -106,7 +106,7 @@ export const Schema = z.object({
 
           // 预设套装系统
           预设套装: z.record(
-            z.string().describe('套装编号'),
+            z.coerce.number().describe('套装编号').prefault(0),
             z.object({
               编号: z.coerce.number().prefault(0),
               名称: z.string().prefault(''),
@@ -207,7 +207,7 @@ export const Schema = z.object({
         着装管理: z.object({
           // 预设套装系统
           预设套装: z.record(
-            z.string().describe('套装编号'),
+            z.coerce.number().describe('套装编号').prefault(0),
             z.object({
               编号: z.coerce.number().prefault(0),
               名称: z.string().prefault(''),
