@@ -4,7 +4,7 @@ export const Schema = z.object({
   // 世界路径信息
   世界路径: z.object({
     当前位置: z.string().prefault('未知地点'),
-    天气: z.enum(['晴天', '多云', '阴天', '小雨', '大雨', '雷雨', '雪天', '雾天', '大风', '沙尘', '彩虹', '极光', '特殊']).prefault('晴天'),
+    天气: z.string().prefault('晴天'),
     当前时间: z.string().describe('格式: HH:MM，24小时制').prefault('00:00'),
     具体时间段: z.enum(['凌晨', '清晨', '早上', '上午', '中午', '下午', '傍晚', '夜晚', '深夜', '午夜']).prefault('中午'),
     当前日期: z.object({
