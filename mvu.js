@@ -63,7 +63,7 @@ export const Schema = z.object({
         }).prefault({}),
 
         // 当前着装变量
-        当前着装编号: z.coerce.number().prefault(-1)
+        当前着装编号: z.coerce.string().prefault(-1)
       }).prefault({}),
 
       // 人际关系
@@ -138,7 +138,7 @@ export const Schema = z.object({
           }).prefault({}),
 
           // 当前着装变量
-          当前着装编号: z.coerce.number().prefault(-1)
+          当前着装编号: z.coerce.string().prefault(-1)
         }).prefault({}),
 
         // 人际关系
@@ -237,7 +237,7 @@ export const Schema = z.object({
           }).prefault({}),
 
           // 当前着装变量
-          当前着装编号: z.coerce.number().prefault(-1)
+          当前着装编号: z.coerce.string().prefault(-1)
         }).prefault({}),
 
         // 人际关系
